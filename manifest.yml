@@ -1,0 +1,8 @@
+---
+applications:
+ - name: MyChatBotDemos
+   random-route: true
+   path: target/GetStartedJava.war
+   memory: 256M
+   instances: 1
+   port: 9090
