@@ -1,0 +1,36 @@
+<server>
+
+    <featureManager>
+        <feature>beanValidation-1.1</feature>
+        <feature>cdi-1.2</feature>
+        <feature>ejbLite-3.2</feature>
+        <feature>el-3.0</feature>
+        <feature>jaxrs-2.0</feature>
+        <feature>jdbc-4.1</feature>
+        <feature>jndi-1.0</feature>
+        <feature>jpa-2.1</feature>
+        <feature>jsf-2.2</feature>
+        <feature>jsonp-1.0</feature>
+        <feature>jsp-2.3</feature>
+        <feature>managedBeans-1.0</feature>
+        <feature>servlet-4.0.1</feature>
+        <feature>websocket-1.1</feature>
+		<feature>json-20190722</feature>
+		<feature>json-lib-2.4</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  host="*"
+                  httpPort="9090"
+				  httpsPort="9443">
+        <tcpOptions soReuseAddr="true"/>
+    </httpEndpoint>
+
+	<Connector port="9090" maxHttpHeaderSize="8192"
+               maxThreads="150" minSpareThreads="25" maxSpareThreads="75"
+               enableLookups="false" redirectPort="9443" acceptCount="100"
+               connectionTimeout="20000" disableUploadTimeout="true" />
+			   
+    <application name="GetStartedJava" context-root="/GetStartedJava" location="${appLocation}" type="war"/>
+
+</server>
